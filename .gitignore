@@ -1,0 +1,16 @@
+HELP.md
+target/
+
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Maven Wrapper ###
+/.mvn/**
+/mvnw
+/mvnw.cmd
