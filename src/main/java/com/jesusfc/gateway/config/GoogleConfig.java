@@ -17,9 +17,11 @@ public class GoogleConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("path_route", r -> r.path("/google").filters(f -> f.rewritePath("/google(?<segment>/?.*)", "/${segment}")).uri("http://localhost:8085"))
-                .route("path_route", r -> r.path("/swagger-ui/**").uri("http://localhost:8085"))
+                .route("google", r -> r.path("/google").filters(f -> f.rewritePath("/google(?<segment>/?.*)", "/${segment}")).uri("http://localhost:8085"))
+                .route("swagger", r -> r.path("/swagger-ui/**").uri("http://localhost:8085"))
                 .route("elmundo", r -> r.path("/espana").uri("http://elmundo.es"))
                 .build();
     }
+
+
 }
