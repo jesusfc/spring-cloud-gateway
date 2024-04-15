@@ -17,9 +17,9 @@ public class GoogleConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("google", r -> r.path("/google").filters(f -> f.rewritePath("/google(?<segment>/?.*)", "/${segment}")).uri("http://localhost:8085"))
-                .route("swagger", r -> r.path("/swagger-ui/**").uri("http://localhost:8085"))
+                .route("google", r -> r.path("/google").filters(f -> f.rewritePath("/google(?<segment>/?.*)", "/${segment}")).uri("https://google.com"))
                 .route("elmundo", r -> r.path("/espana").uri("http://elmundo.es"))
+                .route("sprinter", r -> r.path("/sprinter").filters(f -> f.rewritePath("/(?<segment>/?.*)", "/${segment}")).uri("https://pass.sprintersports.com"))
                 .build();
     }
 
