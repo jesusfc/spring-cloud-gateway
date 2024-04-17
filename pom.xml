@@ -13,7 +13,7 @@
     <groupId>com.jesusfc</groupId>
     <artifactId>gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gateway</name>
+    <name>spring-cloud-gateway</name>
     <description>Project for Spring Boot Gateway</description>
 
     <properties>
