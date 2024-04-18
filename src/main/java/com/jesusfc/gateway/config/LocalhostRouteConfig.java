@@ -15,8 +15,9 @@ public class LocalhostRouteConfig {
     @Bean
     public RouteLocator routeLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("service_1", r -> r.path("/service_1/*").uri("http://localhost:8081"))
-                .route("service_2", r -> r.path("/service_2/*").uri("http://localhost:8082"))
+                .route("service_1", r -> r.path("/service_1/*").uri("lb://spb3-service-1"))
+                .route("service_2", r -> r.path("/service_2/*").uri("lb://spb3-service-2"))
+                .route("service_feign", r -> r.path("/feign_service_1/*").uri("lb://spb3-service-1"))
                 .build();
 
     }
