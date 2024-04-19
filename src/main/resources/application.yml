@@ -3,6 +3,7 @@ server:
 spring:
   application:
     name: api-cloud-gateway
-
-
+eureka:
+  client:
+    register-with-eureka: false
 
