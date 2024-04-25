@@ -18,6 +18,7 @@ public class LocalhostRouteConfig {
                 .route("service_1", r -> r.path("/service_1/*").uri("lb://spb3-service-1"))
                 .route("service_2", r -> r.path("/service_2/*").uri("lb://spb3-service-2"))
                 .route("feign_service", r -> r.path("/feign-service/*").uri("lb://spb3-service-2"))
+                .route("circuit_breager", r -> r.path("/service-fail/*").uri("lb://spb3-circuit-breaker"))
                 .build();
 
     }
