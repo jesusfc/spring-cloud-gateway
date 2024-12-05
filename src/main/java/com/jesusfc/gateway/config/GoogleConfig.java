@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
  * Author Jesús Fdez. Caraballo
  * Created on abr - 2024
  */
-@Profile("google")
+//@Profile("google") // This is a profile to activate this configuration
 @Configuration
 public class GoogleConfig {
 
