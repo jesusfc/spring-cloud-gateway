@@ -6,4 +6,13 @@ spring:
 eureka:
   client:
     register-with-eureka: false
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+      show-components: always

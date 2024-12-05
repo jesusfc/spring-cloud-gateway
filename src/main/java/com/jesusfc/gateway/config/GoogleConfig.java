@@ -3,13 +3,15 @@ package com.jesusfc.gateway.config;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 /**
  * Author Jesús Fdez. Caraballo
  * Created on abr - 2024
  */
-//@Profile("google")
-//@Configuration
+//@Profile("google") // This is a profile to activate this configuration
+@Configuration
 public class GoogleConfig {
 
     @Bean
