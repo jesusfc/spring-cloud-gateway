@@ -1,20 +1,5 @@
-server:
-  port: 8080
 spring:
-  main:
-    web-application-type: reactive
+  config:
+    import: optional:configserver:http://localhost:8888
   application:
-    name: api-cloud-gateway
-eureka:
-  client:
-    register-with-eureka: false
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-      enabled: true
-      show-components: always
+    name: spring-cloud-gateway
