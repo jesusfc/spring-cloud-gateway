@@ -3,3 +3,8 @@ spring:
     name: spring-cloud-gateway
   config:
     import: optional:configserver:http://localhost:8888
+  cloud: ## We tell to Circuit breaker to fail fast if it can't connect to the configuration server
+    config:
+      fail-fast: true
+      username: mySuperUserName
+      password: mySuperPassword
